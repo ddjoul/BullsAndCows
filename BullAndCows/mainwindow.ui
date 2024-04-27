@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font/>
+  </property>
+  <property name="windowTitle">
+   <string>Быки и коровы</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resours.qrc">
+    <normaloff>:/icons/icons/bulls.png</normaloff>:/icons/icons/bulls.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(245, 190, 79, 255), stop:1 rgba(162, 69, 61, 255))}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(162, 69, 61, 255), stop:1 rgba(137, 49, 42, 255));
+	border:  3px solid #89312a;
+	padding:4px;
+	border-radius:10px;
+	color:#faf6ed;
+	font: 9pt &quot;Century Gothic&quot;;
+}
+QPushButton:hover{
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(162, 69, 61, 200), stop:1 rgba(137, 49, 42, 200));
+	border:  3px solid rgba(137, 49, 42, 200);
+	padding:4px;
+	border-radius:10px;
+	color:#faf6ed;
+	font: 9pt &quot;Century Gothic&quot;;
+}
+QPushButton:disabled{
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(162, 69, 61, 150), stop:1 rgba(137, 49, 42, 150));
+	border:  3px solid #89312a;
+	padding:4px;
+	border-radius:10px;
+	color: rgba(250, 246, 237, 150);
+	font: 9pt &quot;Century Gothic&quot;;
+}
+QLabel{
+	
+	color: rgb(81, 62, 31);
+	font: 700 9pt &quot;Century Gothic&quot;;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="font">
+         <font>
+          <family>Century Gothic</family>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit{background-color: rgba(0, 0, 0, 50);
+border: 2px solid rgba(0, 0, 0, 25);
+color:#faf6ed}
+QLineEdit:enabled{background-color: rgba(0, 0, 0, 100);
+border: 2px solid rgba(0, 0, 0, 50);
+color:#faf6ed}</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="TableRecordsButton">
+        <property name="font">
+         <font>
+          <family>Century Gothic</family>
+          <pointsize>9</pointsize>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(249, 246, 237);</string>
+        </property>
+        <property name="text">
+         <string>Рекорды</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="NewGameButton">
+        <property name="font">
+         <font>
+          <family>Century Gothic</family>
+          <pointsize>9</pointsize>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(249, 246, 237);</string>
+        </property>
+        <property name="text">
+         <string>Новая игра</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="ProofButton">
+        <property name="font">
+         <font>
+          <family>Century Gothic</family>
+          <pointsize>9</pointsize>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(249, 246, 237);</string>
+        </property>
+        <property name="text">
+         <string>Проверить</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Давайте сыграем в игру!</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Ввод числа</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="font">
+       <font>
+        <family>Century Gothic</family>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget { background-color: #faf6ed; alternate-background-color: #ede9df; gridline-color: #ede9df; color: #513e1f; selection-background-color: #e0dcd1; selection-color: #44341a;}
+QHeaderView::section:vertical { border:none; margin-left: 10%; background-color:#ede9df}
+QHeaderView::section:horizontal { border:2px; margin-botton: 10%; background-color:#ede9df}</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="rowCount">
+       <number>0</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>0</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>287</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Число</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Century Gothic</family>
+        </font>
+       </property>
+       <property name="background">
+        <color>
+         <red>210</red>
+         <green>205</green>
+         <blue>194</blue>
+        </color>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>76</red>
+          <green>73</green>
+          <blue>67</blue>
+         </color>
+        </brush>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Результат</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Century Gothic</family>
+        </font>
+       </property>
+       <property name="background">
+        <color>
+         <red>210</red>
+         <green>205</green>
+         <blue>194</blue>
+        </color>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>76</red>
+          <green>73</green>
+          <blue>67</blue>
+         </color>
+        </brush>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resours.qrc"/>
+ </resources>
+ <connections/>
+</ui>
